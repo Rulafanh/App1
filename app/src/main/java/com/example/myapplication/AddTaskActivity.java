@@ -21,7 +21,7 @@ public class AddTaskActivity extends AppCompatActivity {
         String taskName = taskNameEditText.getText().toString().trim();
 
         if (!taskName.isEmpty()) {
-            Task newTask = new Task(taskName, "Due");
+            Task newTask = new Task(taskName, "", "Due", false);
             Intent resultIntent = new Intent();
             resultIntent.putExtra("updatedTask", newTask);
             setResult(RESULT_OK, resultIntent);

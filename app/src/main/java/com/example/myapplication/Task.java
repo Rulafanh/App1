@@ -3,23 +3,32 @@ package com.example.myapplication;
 import java.io.Serializable;
 
 public class Task implements Serializable {
-    private String name;
-    private String status;
+    String title;
+    String description;
+    String dueDate;
+    boolean isDone;
 
-    public Task(String name, String status) {
-        this.name = name;
-        this.status = status;
+    public Task(String title, String description, String dueDate, boolean isDone) {
+        this.title = title;
+        this.description = description;
+        this.dueDate = dueDate;
+        this.isDone = isDone;
     }
 
-    public String getName() {
-        return name;
+    public String getTitle() {
+        return title;
     }
 
-    public String getStatus() {
-        return status;
+    public String getDescription() {
+        return description;
     }
 
-    public void setStatus(String status) {
-        this.status = status;
+    public String getDueDate() {
+        return dueDate;
+    }
+
+    public boolean isDone() {
+        return isDone;
     }
 }
+
